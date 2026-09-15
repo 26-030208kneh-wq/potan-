@@ -53,7 +53,6 @@ body {
     background: white;
     border-radius: 20px;
     padding: 30px;
-
     box-shadow: 0 5px 20px rgba(0,0,0,.1);
 }
 
@@ -79,12 +78,14 @@ body {
     border-radius: 12px;
     padding: 16px;
     margin: 8px 0;
-
     color: white;
     font-size: 18px;
     font-weight: bold;
-
     cursor: pointer;
+}
+
+.start-button:hover {
+    opacity: .9;
 }
 
 .ai-button {
@@ -95,21 +96,14 @@ body {
     background: #1976d2;
 }
 
-.start-button:hover {
-    opacity: 0.9;
-}
-
 /* 인원 선택 */
 
 .player-select {
     display: none;
-
     background: white;
     border-radius: 20px;
-
     padding: 25px;
     margin-top: 15px;
-
     box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
@@ -121,17 +115,12 @@ body {
 
 .player-number {
     width: 100%;
-
     padding: 13px;
     margin: 5px 0;
-
     border: 2px solid #ddd;
     border-radius: 10px;
-
     background: white;
-
     font-size: 17px;
-
     cursor: pointer;
 }
 
@@ -147,12 +136,9 @@ body {
 
 .info {
     background: white;
-
     border-radius: 15px;
-
     padding: 15px;
     margin: 15px 0;
-
     box-shadow: 0 3px 12px rgba(0,0,0,.08);
 }
 
@@ -171,28 +157,21 @@ body {
 .players {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 10px;
     margin-top: 15px;
 }
 
 .player {
     background: white;
-
     border-radius: 15px;
-
     padding: 15px;
-
     box-shadow: 0 3px 10px rgba(0,0,0,.08);
-
     transition: .2s;
 }
 
 .active {
     border: 3px solid #ffca28;
-
     transform: scale(1.03);
-
     box-shadow: 0 0 15px rgba(255,193,7,.45);
 }
 
@@ -220,21 +199,15 @@ body {
 
 .bomb-area {
     background: #222;
-
     border-radius: 20px;
-
     padding: 30px 20px;
-
     margin-top: 20px;
-
     color: white;
 }
 
 .bomb {
     font-size: 100px;
-
     display: inline-block;
-
     animation: shake .7s infinite;
 }
 
@@ -256,9 +229,7 @@ body {
 
 .timer {
     font-size: 42px;
-
     font-weight: bold;
-
     margin-top: 10px;
 }
 
@@ -272,7 +243,6 @@ body {
 
 .timer.danger {
     color: #ff1744;
-
     animation: blink .5s infinite;
 }
 
@@ -296,13 +266,9 @@ body {
 
 .bomb-button {
     width: 100%;
-
     border: none;
-
     border-radius: 15px;
-
     padding: 20px;
-
     margin-top: 20px;
 
     background: linear-gradient(
@@ -312,11 +278,8 @@ body {
     );
 
     color: white;
-
     font-size: 23px;
-
     font-weight: bold;
-
     cursor: pointer;
 
     box-shadow: 0 5px 0 #8b0000;
@@ -328,7 +291,6 @@ body {
 
 .bomb-button:active {
     transform: translateY(3px);
-
     box-shadow: 0 2px 0 #8b0000;
 }
 
@@ -337,29 +299,21 @@ body {
     cursor: not-allowed;
 }
 
-/* 게임 버튼 */
+/* 버튼 */
 
 .buttons {
     display: flex;
-
     gap: 10px;
-
     margin-top: 20px;
 }
 
 .game-button {
     flex: 1;
-
     border: none;
-
     border-radius: 10px;
-
     padding: 14px;
-
     font-size: 16px;
-
     font-weight: bold;
-
     cursor: pointer;
 }
 
@@ -377,39 +331,24 @@ body {
 
 .result {
     display: none;
-
     background: white;
-
     margin-top: 20px;
-
     padding: 25px;
-
     border-radius: 15px;
-
     font-size: 24px;
-
     font-weight: bold;
-
     box-shadow: 0 4px 15px rgba(0,0,0,.12);
 }
 
 .result button {
     margin-top: 15px;
-
     border: none;
-
     border-radius: 10px;
-
     padding: 14px 30px;
-
     background: #168447;
-
     color: white;
-
     font-size: 18px;
-
     font-weight: bold;
-
     cursor: pointer;
 }
 
@@ -655,18 +594,17 @@ let round = 1;
 
 
 /*
-   ★ 게임 전체 시간 ★
+   게임 전체 제한시간
 
-   항상 30초에서 시작합니다.
-
-   턴을 넘겨도 초기화하지 않습니다.
+   ★ 항상 30초에서 시작
+   ★ 턴을 넘겨도 초기화하지 않음
 */
 
 let remainingTime = 30;
 
 
 /*
-   타이머
+   게임 타이머
 */
 
 let timerInterval = null;
@@ -680,7 +618,7 @@ let aiTimeout = null;
 
 
 /*
-   폭발 후 대기
+   폭발 후 대기 타이머
 */
 
 let explosionTimeout = null;
@@ -698,7 +636,7 @@ function startAI() {
 
 
     /*
-       나
+       사람 1명
     */
 
     players.push({
@@ -872,6 +810,7 @@ function restartGame() {
             "bomb"
         );
 
+
     bomb.textContent = "💣";
 
     bomb.classList.remove(
@@ -905,11 +844,15 @@ function restartGame() {
 
 
     /*
-       게임 전체 타이머 시작
+       타이머 시작
     */
 
     startTimer();
 
+
+    /*
+       AI 차례 확인
+    */
 
     checkAI();
 
@@ -951,7 +894,7 @@ function renderPlayers() {
 
 
         /*
-           현재 플레이어
+           현재 차례 표시
         */
 
         if (
@@ -967,7 +910,7 @@ function renderPlayers() {
 
 
         /*
-           탈락한 플레이어
+           탈락 표시
         */
 
         if (
@@ -1006,7 +949,9 @@ function renderPlayers() {
             '</div>';
 
 
-        container.appendChild(div);
+        container.appendChild(
+            div
+        );
 
     }
 
@@ -1014,7 +959,7 @@ function renderPlayers() {
 
 
 /* =========================
-   차례 표시
+   현재 차례
    ========================= */
 
 function updateTurn() {
@@ -1083,7 +1028,7 @@ function updateTurn() {
 
 
 /* =========================
-   ★ 전체 게임 타이머
+   전체 게임 타이머
    ========================= */
 
 function startTimer() {
@@ -1091,16 +1036,8 @@ function startTimer() {
     clearInterval(timerInterval);
 
 
-    /*
-       현재 시간 그대로 표시
-    */
-
     updateTimerDisplay();
 
-
-    /*
-       1초마다 1초 감소
-    */
 
     timerInterval =
         setInterval(
@@ -1224,11 +1161,6 @@ function passBomb() {
         players[currentIndex];
 
 
-    /*
-       이미 탈락한 플레이어라면
-       실행하지 않음
-    */
-
     if (
         !player.alive
     ) {
@@ -1236,17 +1168,13 @@ function passBomb() {
     }
 
 
-    /*
-       AI 예약 취소
-    */
-
     clearTimeout(aiTimeout);
 
 
     /*
-       다음 플레이어로 이동
+       다음 사람에게 폭탄 전달
 
-       ★ 시간은 그대로 유지
+       ★ 남은 시간 유지
     */
 
     nextPlayer();
@@ -1295,8 +1223,9 @@ function nextPlayer() {
 
 
     /*
-       ★ 타이머를 초기화하지 않습니다.
-       기존 타이머가 계속 갑니다.
+       ★ 타이머를 초기화하지 않음
+
+       남은 시간 그대로 계속 감소
     */
 
     checkAI();
@@ -1305,7 +1234,7 @@ function nextPlayer() {
 
 
 /* =========================
-   AI
+   ★ AI
    ========================= */
 
 function checkAI() {
@@ -1329,25 +1258,29 @@ function checkAI() {
 
 
         /*
-           AI는 0.4 ~ 0.9초 후
-           폭탄을 넘김
+           ★ AI 랜덤 대기시간
+
+           최소: 0.5초
+           최대: 3초
         */
 
         const delay =
-            400 +
-            Math.random() * 500;
+            500 +
+            Math.random() * 2500;
 
 
         aiTimeout =
             setTimeout(
                 function() {
 
-                    if (
-                        gameOver
-                    ) {
+                    if (gameOver) {
                         return;
                     }
 
+
+                    /*
+                       AI가 폭탄을 돌림
+                    */
 
                     passBomb();
 
@@ -1416,7 +1349,7 @@ function explode() {
 
 
     /*
-       생존자가 1명인지 확인
+       생존자 확인
     */
 
     const alive =
@@ -1424,6 +1357,10 @@ function explode() {
             p => p.alive
         );
 
+
+    /*
+       한 명 남으면 종료
+    */
 
     if (
         alive.length <= 1
@@ -1463,7 +1400,7 @@ function explode() {
 
 
     /*
-       폭발 후 다음 플레이어
+       다음 생존자
     */
 
     explosionTimeout =
@@ -1476,10 +1413,6 @@ function explode() {
                     "explosion"
                 );
 
-
-                /*
-                   다음 생존자 찾기
-                */
 
                 let next =
                     currentIndex;
@@ -1513,7 +1446,6 @@ function explode() {
                 */
 
                 startTimer();
-
 
                 checkAI();
 
@@ -1589,7 +1521,7 @@ function finishGame(message) {
 
 
 /* =========================
-   처음으로
+   메인 화면으로
    ========================= */
 
 function goHome() {
