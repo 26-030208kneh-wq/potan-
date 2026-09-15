@@ -33,10 +33,7 @@ body {
     text-align: center;
 }
 
-
-/* =========================
-   제목
-   ========================= */
+/* 제목 */
 
 .title {
     font-size: 42px;
@@ -50,18 +47,14 @@ body {
     margin-bottom: 25px;
 }
 
-
-/* =========================
-   시작 화면
-   ========================= */
+/* 시작 화면 */
 
 .start-box {
     background: white;
     border-radius: 20px;
     padding: 30px;
 
-    box-shadow:
-        0 5px 20px rgba(0,0,0,.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
 }
 
 .big-bomb {
@@ -82,15 +75,12 @@ body {
 
 .start-button {
     width: 100%;
-
     border: none;
     border-radius: 12px;
-
     padding: 16px;
     margin: 8px 0;
 
     color: white;
-
     font-size: 18px;
     font-weight: bold;
 
@@ -105,24 +95,22 @@ body {
     background: #1976d2;
 }
 
+.start-button:hover {
+    opacity: 0.9;
+}
 
-/* =========================
-   인원 선택
-   ========================= */
+/* 인원 선택 */
 
 .player-select {
     display: none;
 
     background: white;
-
     border-radius: 20px;
 
     padding: 25px;
-
     margin-top: 15px;
 
-    box-shadow:
-        0 5px 20px rgba(0,0,0,.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
 .player-select-title {
@@ -135,11 +123,9 @@ body {
     width: 100%;
 
     padding: 13px;
-
     margin: 5px 0;
 
     border: 2px solid #ddd;
-
     border-radius: 10px;
 
     background: white;
@@ -153,10 +139,7 @@ body {
     background: #f1f1f1;
 }
 
-
-/* =========================
-   게임
-   ========================= */
+/* 게임 */
 
 #game {
     display: none;
@@ -168,11 +151,9 @@ body {
     border-radius: 15px;
 
     padding: 15px;
-
     margin: 15px 0;
 
-    box-shadow:
-        0 3px 12px rgba(0,0,0,.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
 }
 
 .turn {
@@ -185,19 +166,13 @@ body {
     margin-top: 5px;
 }
 
-
-/* =========================
-   플레이어
-   ========================= */
+/* 플레이어 */
 
 .players {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 10px;
-
     margin-top: 15px;
 }
 
@@ -208,8 +183,7 @@ body {
 
     padding: 15px;
 
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 
     transition: .2s;
 }
@@ -219,8 +193,7 @@ body {
 
     transform: scale(1.03);
 
-    box-shadow:
-        0 0 15px rgba(255,193,7,.45);
+    box-shadow: 0 0 15px rgba(255,193,7,.45);
 }
 
 .eliminated {
@@ -243,10 +216,7 @@ body {
     color: #777;
 }
 
-
-/* =========================
-   폭탄 영역
-   ========================= */
+/* 폭탄 */
 
 .bomb-area {
     background: #222;
@@ -265,8 +235,7 @@ body {
 
     display: inline-block;
 
-    animation:
-        shake .7s infinite;
+    animation: shake .7s infinite;
 }
 
 @keyframes shake {
@@ -290,8 +259,6 @@ body {
 
     font-weight: bold;
 
-    color: #ff5252;
-
     margin-top: 10px;
 }
 
@@ -306,8 +273,7 @@ body {
 .timer.danger {
     color: #ff1744;
 
-    animation:
-        blink .5s infinite;
+    animation: blink .5s infinite;
 }
 
 @keyframes blink {
@@ -326,10 +292,7 @@ body {
 
 }
 
-
-/* =========================
-   폭탄 버튼
-   ========================= */
+/* 폭탄 버튼 */
 
 .bomb-button {
     width: 100%;
@@ -342,12 +305,11 @@ body {
 
     margin-top: 20px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ff1744,
-            #d50000
-        );
+    background: linear-gradient(
+        135deg,
+        #ff1744,
+        #d50000
+    );
 
     color: white;
 
@@ -357,8 +319,7 @@ body {
 
     cursor: pointer;
 
-    box-shadow:
-        0 5px 0 #8b0000;
+    box-shadow: 0 5px 0 #8b0000;
 }
 
 .bomb-button:hover {
@@ -368,8 +329,7 @@ body {
 .bomb-button:active {
     transform: translateY(3px);
 
-    box-shadow:
-        0 2px 0 #8b0000;
+    box-shadow: 0 2px 0 #8b0000;
 }
 
 .bomb-button:disabled {
@@ -377,10 +337,7 @@ body {
     cursor: not-allowed;
 }
 
-
-/* =========================
-   버튼
-   ========================= */
+/* 게임 버튼 */
 
 .buttons {
     display: flex;
@@ -416,10 +373,7 @@ body {
     color: white;
 }
 
-
-/* =========================
-   결과
-   ========================= */
+/* 결과 */
 
 .result {
     display: none;
@@ -436,8 +390,7 @@ body {
 
     font-weight: bold;
 
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.12);
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
 }
 
 .result button {
@@ -460,14 +413,10 @@ body {
     cursor: pointer;
 }
 
-
-/* =========================
-   폭발
-   ========================= */
+/* 폭발 */
 
 .explosion {
-    animation:
-        explode .4s infinite;
+    animation: explode .4s infinite;
 }
 
 @keyframes explode {
@@ -486,20 +435,12 @@ body {
 
 }
 
-
-/* =========================
-   모바일
-   ========================= */
+/* 모바일 */
 
 @media (max-width: 500px) {
 
     .title {
         font-size: 34px;
-    }
-
-    .players {
-        grid-template-columns:
-            repeat(2, 1fr);
     }
 
     .bomb {
@@ -515,15 +456,13 @@ body {
 </style>
 </head>
 
-
 <body>
 
 <div id="app">
 
-
-<!-- ==================================================
+<!-- =========================
      메인 화면
-     ================================================== -->
+     ========================= -->
 
 <div id="home">
 
@@ -534,7 +473,6 @@ body {
     <div class="subtitle">
         폭탄이 터지기 전에 다음 사람에게 넘기세요!
     </div>
-
 
     <div class="start-box">
 
@@ -550,7 +488,6 @@ body {
             게임 방식을 선택해주세요.
         </div>
 
-
         <button
             class="start-button ai-button"
             onclick="startAI()"
@@ -562,7 +499,6 @@ body {
             </small>
         </button>
 
-
         <button
             class="start-button friend-button"
             onclick="showFriendSelect()"
@@ -571,9 +507,6 @@ body {
         </button>
 
     </div>
-
-
-    <!-- 친구 인원 선택 -->
 
     <div
         class="player-select"
@@ -584,14 +517,12 @@ body {
             👥 인원수를 선택하세요
         </div>
 
-
         <button
             class="player-number"
             onclick="startFriend(2)"
         >
             2명
         </button>
-
 
         <button
             class="player-number"
@@ -600,14 +531,12 @@ body {
             3명
         </button>
 
-
         <button
             class="player-number"
             onclick="startFriend(4)"
         >
             4명
         </button>
-
 
         <button
             class="player-number"
@@ -621,16 +550,15 @@ body {
 </div>
 
 
-<!-- ==================================================
+<!-- =========================
      게임 화면
-     ================================================== -->
+     ========================= -->
 
 <div id="game">
 
     <div class="title">
         💣 폭탄 돌리기
     </div>
-
 
     <div class="info">
 
@@ -650,16 +578,10 @@ body {
 
     </div>
 
-
-    <!-- 플레이어 -->
-
     <div
         class="players"
         id="players"
     ></div>
-
-
-    <!-- 폭탄 -->
 
     <div class="bomb-area">
 
@@ -670,14 +592,12 @@ body {
             💣
         </div>
 
-
         <div
             class="timer safe"
             id="timer"
         >
             30초
         </div>
-
 
         <button
             class="bomb-button"
@@ -689,16 +609,10 @@ body {
 
     </div>
 
-
-    <!-- 결과 -->
-
     <div
         class="result"
         id="result"
     ></div>
-
-
-    <!-- 버튼 -->
 
     <div class="buttons">
 
@@ -708,7 +622,6 @@ body {
         >
             🔄 다시 시작
         </button>
-
 
         <button
             class="game-button home"
@@ -726,55 +639,27 @@ body {
 
 <script>
 
-/* ==================================================
+/* =========================
    게임 변수
-   ================================================== */
-
-
-/*
-   최대 5명
-*/
+   ========================= */
 
 let players = [];
 
-
-/*
-   현재 플레이어
-*/
-
 let currentIndex = 0;
-
-
-/*
-   AI / 친구
-*/
 
 let gameMode = "ai";
 
-
-*
-   게임 종료 여부
-*/
-
 let gameOver = false;
-
-
-/*
-   라운드
-*/
 
 let round = 1;
 
 
 /*
-   ★ 핵심 ★
+   ★ 게임 전체 시간 ★
 
-   게임 전체의 폭탄 시간.
+   항상 30초에서 시작합니다.
 
-   처음에는 30초.
-
-   턴이 넘어가도 절대
-   30초로 초기화하지 않는다.
+   턴을 넘겨도 초기화하지 않습니다.
 */
 
 let remainingTime = 30;
@@ -795,15 +680,15 @@ let aiTimeout = null;
 
 
 /*
-   폭발 처리 타이머
+   폭발 후 대기
 */
 
 let explosionTimeout = null;
 
 
-/* ==================================================
-   AI 게임 시작
-   ================================================== */
+/* =========================
+   AI와 하기
+   ========================= */
 
 function startAI() {
 
@@ -813,7 +698,7 @@ function startAI() {
 
 
     /*
-       사람 1명
+       나
     */
 
     players.push({
@@ -857,9 +742,9 @@ function startAI() {
 }
 
 
-/* ==================================================
-   친구 선택 화면
-   ================================================== */
+/* =========================
+   친구 인원 선택
+   ========================= */
 
 function showFriendSelect() {
 
@@ -886,9 +771,9 @@ function showFriendSelect() {
 }
 
 
-/* ==================================================
-   친구 게임 시작
-   ================================================== */
+/* =========================
+   친구와 하기
+   ========================= */
 
 function startFriend(count) {
 
@@ -904,16 +789,9 @@ function startFriend(count) {
     ) {
 
         players.push({
-
-            name:
-                "플레이어 " + i,
-
-            type:
-                "human",
-
-            alive:
-                true
-
+            name: "플레이어 " + i,
+            type: "human",
+            alive: true
         });
 
     }
@@ -934,32 +812,18 @@ function startFriend(count) {
 }
 
 
-/* ==================================================
-   게임 초기화
-   ================================================== */
+/* =========================
+   게임 시작 / 다시 시작
+   ========================= */
 
 function restartGame() {
 
-    /*
-       기존 타이머 제거
-    */
+    clearInterval(timerInterval);
 
-    clearInterval(
-        timerInterval
-    );
+    clearTimeout(aiTimeout);
 
-    clearTimeout(
-        aiTimeout
-    );
+    clearTimeout(explosionTimeout);
 
-    clearTimeout(
-        explosionTimeout
-    );
-
-
-    /*
-       혹시 플레이어가 없는 경우
-    */
 
     if (
         players.length === 0
@@ -985,40 +849,28 @@ function restartGame() {
     }
 
 
-    /*
-       첫 번째 플레이어부터
-    */
-
     currentIndex = 0;
 
-
-    /*
-       첫 라운드
-    */
-
     round = 1;
-
-
-    /*
-       ★ 항상 새 게임 시작 시
-       30초부터 시작
-    */
-
-    remainingTime = 30;
-
 
     gameOver = false;
 
 
     /*
-       폭탄 복구
+       ★ 새 게임은 30초
+    */
+
+    remainingTime = 30;
+
+
+    /*
+       폭탄 초기화
     */
 
     const bomb =
         document.getElementById(
             "bomb"
         );
-
 
     bomb.textContent = "💣";
 
@@ -1037,7 +889,7 @@ function restartGame() {
 
 
     /*
-       결과창 숨김
+       결과 숨기기
     */
 
     document.getElementById(
@@ -1045,34 +897,28 @@ function restartGame() {
     ).style.display = "none";
 
 
-    /*
-       화면 업데이트
-    */
-
     renderPlayers();
 
     updateTurn();
 
+    updateTimerDisplay();
+
 
     /*
-       타이머 시작
+       게임 전체 타이머 시작
     */
 
     startTimer();
 
-
-    /*
-       AI 확인
-    */
 
     checkAI();
 
 }
 
 
-/* ==================================================
-   플레이어 화면
-   ================================================== */
+/* =========================
+   플레이어 표시
+   ========================= */
 
 function renderPlayers() {
 
@@ -1101,8 +947,7 @@ function renderPlayers() {
             );
 
 
-        div.className =
-            "player";
+        div.className = "player";
 
 
         /*
@@ -1122,7 +967,7 @@ function renderPlayers() {
 
 
         /*
-           탈락
+           탈락한 플레이어
         */
 
         if (
@@ -1135,10 +980,6 @@ function renderPlayers() {
 
         }
 
-
-        /*
-           아이콘
-        */
 
         const icon =
             player.type === "ai"
@@ -1157,28 +998,24 @@ function renderPlayers() {
             '</div>' +
 
             '<div class="status">' +
-
             (
                 player.alive
                 ? "🟢 생존"
                 : "💀 탈락"
             ) +
-
             '</div>';
 
 
-        container.appendChild(
-            div
-        );
+        container.appendChild(div);
 
     }
 
 }
 
 
-/* ==================================================
+/* =========================
    차례 표시
-   ================================================== */
+   ========================= */
 
 function updateTurn() {
 
@@ -1193,7 +1030,6 @@ function updateTurn() {
 
 
     if (
-        gameMode === "ai" &&
         player.type === "ai"
     ) {
 
@@ -1221,10 +1057,6 @@ function updateTurn() {
         round;
 
 
-    /*
-       사람/AI에 따라 버튼 표시
-    */
-
     const button =
         document.getElementById(
             "bombButton"
@@ -1250,33 +1082,24 @@ function updateTurn() {
 }
 
 
-/* ==================================================
+/* =========================
    ★ 전체 게임 타이머
-   ================================================== */
+   ========================= */
 
 function startTimer() {
 
-    /*
-       기존 인터벌 제거
-
-       중요:
-       시간을 초기화하지 않는다.
-    */
-
-    clearInterval(
-        timerInterval
-    );
+    clearInterval(timerInterval);
 
 
     /*
-       현재 남은 시간 표시
+       현재 시간 그대로 표시
     */
 
     updateTimerDisplay();
 
 
     /*
-       1초마다 감소
+       1초마다 1초 감소
     */
 
     timerInterval =
@@ -1297,24 +1120,29 @@ function startTimer() {
                 remainingTime--;
 
 
-                updateTimerDisplay();
-
-
-                /*
-                   0초
-                */
-
                 if (
-                    remainingTime <= 0
+                    remainingTime < 0
                 ) {
 
                     remainingTime = 0;
 
+                }
+
+
+                updateTimerDisplay();
+
+
+                /*
+                   0초가 되면 폭발
+                */
+
+                if (
+                    remainingTime === 0
+                ) {
 
                     clearInterval(
                         timerInterval
                     );
-
 
                     explode();
 
@@ -1327,9 +1155,9 @@ function startTimer() {
 }
 
 
-/* ==================================================
+/* =========================
    타이머 표시
-   ================================================== */
+   ========================= */
 
 function updateTimerDisplay() {
 
@@ -1342,10 +1170,6 @@ function updateTimerDisplay() {
     timer.textContent =
         remainingTime + "초";
 
-
-    /*
-       색상 변경
-    */
 
     timer.classList.remove(
         "safe",
@@ -1385,48 +1209,44 @@ function updateTimerDisplay() {
 }
 
 
-/* ==================================================
-   ★ 폭탄 돌리기
-   ================================================== */
+/* =========================
+   폭탄 돌리기
+   ========================= */
 
 function passBomb() {
 
     if (gameOver) {
-
         return;
-
     }
 
-
-    /*
-       현재 플레이어
-    */
 
     const player =
         players[currentIndex];
 
 
     /*
-       폭탄 돌리기 버튼을 누른 순간
-       현재 턴 종료
+       이미 탈락한 플레이어라면
+       실행하지 않음
     */
 
-    /*
-       타이머는 절대 초기화하지 않는다.
-    */
-
-
-    /*
-       AI 타이머가 있다면 취소
-    */
-
-    clearTimeout(
-        aiTimeout
-    );
+    if (
+        !player.alive
+    ) {
+        return;
+    }
 
 
     /*
-       다음 플레이어
+       AI 예약 취소
+    */
+
+    clearTimeout(aiTimeout);
+
+
+    /*
+       다음 플레이어로 이동
+
+       ★ 시간은 그대로 유지
     */
 
     nextPlayer();
@@ -1434,9 +1254,9 @@ function passBomb() {
 }
 
 
-/* ==================================================
-   다음 생존 플레이어
-   ================================================== */
+/* =========================
+   다음 플레이어
+   ========================= */
 
 function nextPlayer() {
 
@@ -1453,7 +1273,6 @@ function nextPlayer() {
             (next + 1) %
             players.length;
 
-
         attempts++;
 
     }
@@ -1467,16 +1286,8 @@ function nextPlayer() {
     currentIndex = next;
 
 
-    /*
-       라운드 증가
-    */
-
     round++;
 
-
-    /*
-       화면 갱신
-    */
 
     renderPlayers();
 
@@ -1484,30 +1295,23 @@ function nextPlayer() {
 
 
     /*
-       ★ 중요 ★
-
-       여기서는 타이머를 새로 시작하지 않는다.
-
-       게임 전체에서 하나의 타이머가
-       계속 감소하도록 한다.
+       ★ 타이머를 초기화하지 않습니다.
+       기존 타이머가 계속 갑니다.
     */
-
 
     checkAI();
 
 }
 
 
-/* ==================================================
+/* =========================
    AI
-   ================================================== */
+   ========================= */
 
 function checkAI() {
 
     if (gameOver) {
-
         return;
-
     }
 
 
@@ -1515,25 +1319,18 @@ function checkAI() {
         players[currentIndex];
 
 
-    /*
-       AI 차례인지 확인
-    */
-
     if (
         gameMode === "ai" &&
         player.type === "ai" &&
         player.alive
     ) {
 
-        clearTimeout(
-            aiTimeout
-        );
+        clearTimeout(aiTimeout);
 
 
         /*
-           ★ AI 빠르게 ★
-
-           0.4 ~ 0.9초
+           AI는 0.4 ~ 0.9초 후
+           폭탄을 넘김
         */
 
         const delay =
@@ -1545,23 +1342,12 @@ function checkAI() {
             setTimeout(
                 function() {
 
-                    /*
-                       게임이 끝났는지 다시 확인
-                    */
-
                     if (
                         gameOver
                     ) {
-
                         return;
-
                     }
 
-
-                    /*
-                       AI도 폭탄 돌리기 버튼을
-                       누르는 것과 같은 동작
-                    */
 
                     passBomb();
 
@@ -1574,36 +1360,25 @@ function checkAI() {
 }
 
 
-/* ==================================================
+/* =========================
    폭발
-   ================================================== */
+   ========================= */
 
 function explode() {
 
     if (gameOver) {
-
         return;
-
     }
 
-
-    /*
-       모든 타이머 정지
-    */
 
     clearInterval(
         timerInterval
     );
 
-
     clearTimeout(
         aiTimeout
     );
 
-
-    /*
-       폭탄 폭발 표시
-    */
 
     const bomb =
         document.getElementById(
@@ -1611,9 +1386,7 @@ function explode() {
         );
 
 
-    bomb.textContent =
-        "💥";
-
+    bomb.textContent = "💥";
 
     bomb.classList.add(
         "explosion"
@@ -1621,8 +1394,7 @@ function explode() {
 
 
     /*
-       현재 플레이어
-       탈락
+       현재 플레이어 탈락
     */
 
     const player =
@@ -1631,10 +1403,6 @@ function explode() {
 
     player.alive = false;
 
-
-    /*
-       화면 갱신
-    */
 
     renderPlayers();
 
@@ -1648,39 +1416,22 @@ function explode() {
 
 
     /*
-       폭발 후 잠시 대기
+       생존자가 1명인지 확인
     */
 
-    explosionTimeout =
-        setTimeout(
-            function() {
-
-                bomb.classList.remove(
-                    "explosion"
-                );
+    const alive =
+        players.filter(
+            p => p.alive
+        );
 
 
-                bomb.textContent =
-                    "💣";
+    if (
+        alive.length <= 1
+    ) {
 
-
-                /*
-                   생존자
-                */
-
-                const alive =
-                    players.filter(
-                        p => p.alive
-                    );
-
-
-                /*
-                   마지막 1명
-                */
-
-                if (
-                    alive.length <= 1
-                ) {
+        explosionTimeout =
+            setTimeout(
+                function() {
 
                     if (
                         alive.length === 1
@@ -1702,10 +1453,28 @@ function explode() {
 
                     }
 
+                },
+                1000
+            );
 
-                    return;
+        return;
 
-                }
+    }
+
+
+    /*
+       폭발 후 다음 플레이어
+    */
+
+    explosionTimeout =
+        setTimeout(
+            function() {
+
+                bomb.textContent = "💣";
+
+                bomb.classList.remove(
+                    "explosion"
+                );
 
 
                 /*
@@ -1728,16 +1497,11 @@ function explode() {
                 );
 
 
-                currentIndex =
-                    next;
+                currentIndex = next;
 
 
                 round++;
 
-
-                /*
-                   화면 갱신
-                */
 
                 renderPlayers();
 
@@ -1745,12 +1509,7 @@ function explode() {
 
 
                 /*
-                   ★ 중요 ★
-
-                   여기에서도 타이머를
-                   30초로 초기화하지 않는다.
-
-                   남은 시간 그대로 계속된다.
+                   ★ 남은 시간 그대로 계속
                 */
 
                 startTimer();
@@ -1759,15 +1518,15 @@ function explode() {
                 checkAI();
 
             },
-            1200
+            1000
         );
 
 }
 
 
-/* ==================================================
+/* =========================
    게임 종료
-   ================================================== */
+   ========================= */
 
 function finishGame(message) {
 
@@ -1778,11 +1537,9 @@ function finishGame(message) {
         timerInterval
     );
 
-
     clearTimeout(
         aiTimeout
     );
-
 
     clearTimeout(
         explosionTimeout
@@ -1800,8 +1557,7 @@ function finishGame(message) {
         );
 
 
-    result.style.display =
-        "block";
+    result.style.display = "block";
 
 
     result.innerHTML =
@@ -1832,25 +1588,19 @@ function finishGame(message) {
 }
 
 
-/* ==================================================
-   메인 화면
-   ================================================== */
+/* =========================
+   처음으로
+   ========================= */
 
 function goHome() {
-
-    /*
-       타이머 정지
-    */
 
     clearInterval(
         timerInterval
     );
 
-
     clearTimeout(
         aiTimeout
     );
-
 
     clearTimeout(
         explosionTimeout
@@ -1860,44 +1610,24 @@ function goHome() {
     gameOver = false;
 
 
-    /*
-       게임 숨기기
-    */
-
     document.getElementById(
         "game"
-    ).style.display =
-        "none";
+    ).style.display = "none";
 
-
-    /*
-       메인 화면
-    */
 
     document.getElementById(
         "home"
-    ).style.display =
-        "block";
+    ).style.display = "block";
 
-
-    /*
-       결과 숨기기
-    */
 
     document.getElementById(
         "result"
-    ).style.display =
-        "none";
+    ).style.display = "none";
 
-
-    /*
-       인원 선택 숨기기
-    */
 
     document.getElementById(
         "playerSelect"
-    ).style.display =
-        "none";
+    ).style.display = "none";
 
 }
 
